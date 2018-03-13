@@ -3,29 +3,29 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Properties properties = new Properties();
-
-        properties.setProperty("Driver", "Oracle JDBC");
-        properties.setProperty("URL", "JDBC.Oracle.thin:@localhost1521:xe");
-        properties.setProperty("User", "Yoon");
-        properties.setProperty("Pass", "sangwon");
-
+//        Properties properties = new Properties();
+//
+//        properties.setProperty("Driver", "Oracle JDBC");
+//        properties.setProperty("URL", "JDBC.Oracle.thin:@localhost1521:xe");
+//        properties.setProperty("User", "Yoon");
+//        properties.setProperty("Pass", "sangwon");
+//
 //        System.out.print(properties + "\n");
-
-        try {
-            properties.store(new FileOutputStream("OracleDriver.dat"), "jdbcOracle");
-            properties.store(new FileWriter("OracleDriver.txt"), "Use Write");
-            properties.storeToXML(new FileOutputStream("OracleXml.xml"), "Save Xml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//            properties.store(new FileOutputStream("OracleDriver.dat"), "jdbcOracle");
+//            properties.store(new FileWriter("OracleDriver.txt"), "Use Write");
+//            properties.storeToXML(new FileOutputStream("OracleXml.xml"), "Save Xml");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         Properties rprop = new Properties();
 
         try {
-            rprop.load(new FileInputStream("OracleDriver.dat"));
+//            rprop.load(new FileInputStream("OracleDriver.dat"));
             rprop.loadFromXML(new FileInputStream("OracleXml.xml"));
-            rprop.load(new FileReader("OracleDriver.txt"));
+//            rprop.load(new FileReader("OracleDriver.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
